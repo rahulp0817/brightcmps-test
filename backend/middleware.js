@@ -27,3 +27,6 @@ const authmiddlaware = (req, res, next) => {
 }
 
 export { authmiddlaware }
+
+
+// not need to declare if want to update whole details of user then need middleware.. if want then i can update..
