@@ -25,11 +25,32 @@
 
 ## use postman to validate
 
+## Registration with hashed password
 <img width="750" alt="postman-test1" src="https://github.com/user-attachments/assets/722fb9f7-d770-4ce8-a028-d7adafd73184">
-<img width="754" alt="postman-test2" src="https://github.com/user-attachments/assets/226e982a-1773-4c28-addf-bf3f6dc1f02f"><img<img width="758" alt="postman-update1" src="https://github.com/user-attachments/assets/41420b66-2a27-49f8-892c-872299c78ab0"><img width="803" alt="postman-inputvalid" src="https://github.com/user-attachments/assets/3f8f0ea5-72f8-4a39-9b7b-cd2d298f713a">
 
- width="1060" alt="mongo-te<img width="791" alt="postman-err-r1" src="https://github.com/user-attachments/assets/47654142-e486-4dbe-8<img width="778" alt="postman-err-l1" src="https://github.com/user-attachments/assets/73fc54cc-8549-4988-8e29-647b32f814bf">
-6f0-f08a527a3f0e">
-st1" src="https://github.com/user-attachments/assets/18afed86-677c-4792-837d-141662de2b6f">
+## MongoDB store 
+<img width="1060" alt="mongo-test1" src="https://github.com/user-attachments/assets/e94f0be8-6f1e-4f7b-a4e1-f2ceb1f61b1d">
+
+## error registration
+<img width="791" alt="postman-err-r1" src="https://github.com/user-attachments/assets/dd50cf72-c41b-4f4b-a1f5-1c3ce2c11e0e">
+
+## login
+<img width="754" alt="postman-test2" src="https://github.com/user-attachments/assets/226e982a-1773-4c28-addf-bf3f6dc1f02f">
 
 <img width="669" alt="postman-test3" src="https://github.com/user-attachments/assets/8dea5ced-30ca-4bcc-b538-4993c6afd3f2">
+
+## error login
+<img width="778" alt="postman-err-l1" src="https://github.com/user-attachments/assets/73fc54cc-8549-4988-8e29-647b32f814bf">
+
+## update password 
+<img width="758" alt="postman-update1" src="https://github.com/user-attachments/assets/43039efb-f023-4494-9757-b947d5062ee4">
+
+## error input validation using Zod
+<img width="803" alt="postman-inputvalid" src="https://github.com/user-attachments/assets/fcff5ee6-9b5a-4c9c-ab51-e84dddfa1077">
+
+
+
+
+
+
+
