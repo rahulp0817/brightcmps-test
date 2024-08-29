@@ -8,6 +8,7 @@
 - jwt 
 - Zod
 - bcrypt
+- Docker
 
 ## Steps to execute
 1. Clone the repository
