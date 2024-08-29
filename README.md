@@ -22,6 +22,7 @@
 - created `user.js` in the routes folder to handle user registration, login, and reset of password
 - created `auth.js` to handle the authentication of the user
 - Zod is used for input validation
+- I used Docker to create a Mongo image 
 
 ## use postman to validate
 
