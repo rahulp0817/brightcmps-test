@@ -10,7 +10,7 @@
 - bcrypt
 
 ## Steps to execute
-1. Clone the repository<img width="728" alt="test1" src="https://github.com/user-attachments/assets/ea983d3c-f287-40c4-84af-c61687fa31ed">
+1. Clone the repository
 
 2. Install the required packages by running `npm install` in the terminal
 3. Create a new MongoDB database and replace the `MONGO_URI` or used docker to create mongo image
@@ -24,3 +24,4 @@
 - zod is used for input validation
 
 ## use postman to validated
+<img width="728" alt="test1" src="https://github.com/user-attachments/assets/ea983d3c-f287-40c4-84af-c61687fa31ed">
