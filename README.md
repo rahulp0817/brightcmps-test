@@ -7,6 +7,7 @@
 - MongoDB
 - jwt 
 - zod
+- bcrypt
 
 ## Steps to execute
 1. Clone the repository
