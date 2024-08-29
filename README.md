@@ -22,5 +22,5 @@
 - created `auth.js` to handle the authentication of user
 - zod is used for input validation
 
-## use postman to validated
+# use postman to validated
 
