@@ -3,6 +3,7 @@ import zod from 'zod'
 import jwt from 'jsonwebtoken'
 import { User } from '../mongo.js'
 import { JWT_SECRET } from '../config.js'
+import { authmiddlaware } from '../middleware.js'
 import bcrypt from 'bcrypt'
 const router = express.Router()
 const saltRounds = 10
@@ -145,9 +146,10 @@ const updateSchema = zod.object({
   }).min(6)
 })
 
+
 // update user details endpoint
 
-// http://localhost:3000/api/user/register  (put)  --> use in postman
+// http://localhost:3000/api/user/update  (put)  --> use in postman
 router.put('/update', async (req, res) => {
   const { success } = updateSchema.safeParse(req.body);
 
@@ -188,5 +190,51 @@ router.put('/update', async (req, res) => {
   }
 
 })
+
+
+// http://localhost:3000/api/user/updateauth  (put)  --> use in postman
+const updatedata = zod.object({
+  password: zod.string(),
+})
+
+// with auth middleware update password
+router.put('/updateauth', authmiddlaware, async (req, res) => {
+
+  const { success, error } = updatedata.safeParse(req.body);
+
+  if (!success) {
+    return res.status(400).json({
+      message: "Error while updating information",
+      details: error.errors
+    });
+  }
+
+
+  const { password } = req.body;
+
+  try {
+    const user = await User.findById(req.userId)
+    if (!user) {
+      return res.status(404).json({
+        message: "User not found"
+      });
+    }
+
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    user.password = hashedPassword;
+    await user.save();
+
+    res.json({
+      message: "Password updated successfully"
+    });
+
+  } catch (error) {
+    res.status(500).json({
+      message: "Error while updating password",
+      details: error.message
+    });
+  }
+});
 
 export default router;

@@ -1,4 +1,4 @@
-import { JWT_SECRET } from '../config.js';
+import { JWT_SECRET } from './config.js';
 import jwt from 'jsonwebtoken';
 
 const authmiddlaware = (req, res, next) => {
@@ -10,23 +10,29 @@ const authmiddlaware = (req, res, next) => {
     })
   }
 
-  const token = authHeader.split('')[1];
+  const token = authHeader.split(' ')[1];
 
   try {
 
     const decode = jwt.verify(token, JWT_SECRET);
 
-    req.userId = decode.userId;
+    if (decode.userId) {
+      req.userId = decode.userId;
+      next();
+    } else {
+      res.status(403).json({
+        message: "Invalid token"
+      })
+    }
 
-    next();
 
   } catch (error) {
-    res.status(403).json({});
+    res.status(403).json({
+      message: "Invalid token"
+    });
   }
 
 }
 
 export { authmiddlaware }
 
-
-// not need to declare if want to update whole details of user then need middleware.. if want then i can update..
